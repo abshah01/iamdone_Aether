@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glimmer | Your Daily Ritual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="welcome-overlay" class="overlay">
+        <div class="welcome-box">
+            <h1>Glimmer</h1>
+            <p>Welcome. What is your name?</p>
+            <input type="text" id="initial-name" placeholder="Type here...">
+            <button onclick="firstTimeSave()">Enter Vault</button>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <div class="menu-btn" onclick="toggleMenu()">☰ MENU</div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h3>SETTINGS</h3>
+            <span class="close-btn" onclick="toggleMenu()">✕</span>
+        </div>
+        <div class="section">
+            <label>Update Profile</label>
+            <input type="text" id="user-name-input" placeholder="New name...">
+            <button onclick="saveName()">Update</button>
+        </div>
+        <hr>
+        <div class="section">
+            <label>Favorites Vault</label>
+            <div id="fav-list" class="fav-list"></div>
+            <button class="clear-btn" onclick="clearFavs()">Clear All</button>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div id="ritual-container">
+            <div class="greeting" id="greet-text"></div>
+            <div class="day-indicator" id="day-id"></div>
+            <div class="quote-box" id="quote-display"></div>
+            <button class="heart-icon" id="heart-btn" onclick="handleLike()">♡</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
